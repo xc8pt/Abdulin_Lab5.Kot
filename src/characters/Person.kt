@@ -1,5 +1,7 @@
+package characters
+
 fun main() {
-// val naruto: Hero = Hero()
+// val naruto: characters.Hero = characters.Hero()
 // naruto.name = "Наруто Узумаки"
 // naruto.gender = "Мужской"
 // naruto.role = "Хокаге"
@@ -11,7 +13,7 @@ fun main() {
 //          "\nМана: ${naruto.mp}"
 // )
 // println("------------")
-// val godjo: Hero = Hero()
+// val godjo: characters.Hero = characters.Hero()
 // godjo.name = "Годжо Сатору"
 // godjo.gender = "Мужской"
 // godjo.role = "Маг Проклятий"
@@ -24,7 +26,7 @@ fun main() {
 //
 // println("--------")
 //
-// val hero = Hero()
+// val hero = characters.Hero()
 // print("Введите имя героя: ")
 // hero.name = readln()
 // print("Введите пол героя: ")
@@ -43,28 +45,31 @@ fun main() {
 //         "\nКласс: ${hero.role}\nЗдоровье: ${hero.hp}" +
 //         "\nМана: ${hero.mp} \nУровень: ${hero.ur} \n" +
 //         "Стихия: ${hero.St}")
-// val hero: Hero = Hero()
+// val hero: characters.Hero = characters.Hero()
 // hero.name = "Rinat"
 // hero.gender = "Мужской"
 // hero.role = "Маг"
 // hero.hp = 60
 // hero.mp = 40
-// Hero.heal()
-// Hero.heal()
+// characters.Hero.heal()
+// characters.Hero.heal()
 // hero.heal()
 //    for (i in 1..10) {
 //        hero.castSpell()
 //    }
-//    val hero = Hero()
+//    val hero = characters.Hero()
 //    hero.greet(hero.name)
 //    hero.greet("Наруто")
 
-//    var naruto = Hero()
+//    var naruto = characters.Hero()
 //    naruto.name = "Наруто"
 //    naruto.name = "Шиноби"
 //    naruto.element = "Ветер"
 //    naruto.mp = 100
 
-
+//    val hero1 = characters.Hero(name = "Артур", hp = 100)
+//    println("Герой жив? ${hero1.isAlive()}")
+//    val hero2 = characters.Hero(name = "Артур", hp = 0)
+//    println("Герой жив? ${hero2.isAlive()}")
 
 }

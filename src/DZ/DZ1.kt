@@ -1,4 +1,4 @@
-/*
+package DZ/*
 ZAD1
  */
 //class Weapon(
@@ -26,7 +26,7 @@ ZAD1
 //        damage += bonus
 //    }
 //}
-//fun main() {
+//fun characters.magic.world.items.main() {
 //    val sword = Weapon()
 //    sword.showInfo()
 //    sword.use()
@@ -50,7 +50,7 @@ ZAD2
 //        println("$name празднует день рождения! Теперь ему $age лет")
 //    }
 //}
-//fun main() {
+//fun characters.magic.world.items.main() {
 //    val rinat = Student("Rinat", 19)
 //    rinat.introduce()
 //    rinat.haveBirthday()
@@ -84,7 +84,7 @@ ZAD3
 //        }
 //    }
 //}
-//fun main() {
+//fun characters.magic.world.items.main() {
 //    val ivan = Student("Иван", 19)
 //    val rinat = Student("Rinat", 19)
 //    val group = Group("ИСП-231")
@@ -136,7 +136,7 @@ ZAD4*
 //        println()
 //    }
 //}
-//fun main() {
+//fun characters.magic.world.items.main() {
 //    println("=== ПРЯМОУГОЛЬНИКИ ===")
 //    val gc = GeometryCalculator()
 //    gc.rectangleInfo(4, 5)
