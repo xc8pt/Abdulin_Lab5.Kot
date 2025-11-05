@@ -1,6 +1,4 @@
-package DZ
-
-import characters.Enemy
+package DZ_1_2
 
 /*
 ZAD1

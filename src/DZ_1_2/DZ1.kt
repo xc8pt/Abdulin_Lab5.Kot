@@ -1,4 +1,4 @@
-package DZ/*
+package DZ_1_2/*
 ZAD1
  */
 //class Weapon(

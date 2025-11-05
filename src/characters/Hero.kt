@@ -2,15 +2,17 @@ package characters
 
 import magic.Spell
 
-
-class Hero{
-        var name: String = "Неизвестный"
-    var gender: String = "Не указан"
-    var role: String = "Бродяга"
-    var hp: Int = 100
-    var mp: Int = 50
-    var ur: Int = 0
-    var St: String = "Неизвестно"
+class Hero(name: String,
+           var gender: String = "Не указан",
+           var role: String = "Бродяга",
+           var level: Int = 0,
+           element: String = "Неизвестный",
+           hp: Int = 0,
+           var mp: Int = 0,
+           var experience: Int = 0,
+           var ur: Int = 0,
+           var St: String = "Неизвестно"
+) : GameCharacter(name, hp, element) {
 
     fun sayHello(){
         println("Я -- $name, мой путь только начинается!")
@@ -50,16 +52,16 @@ class Hero{
     fun greet(name: String){
         println("Прривет, $name!")
     }
-//    fun castSpellOn(enemy: characters.Enemy, spellName: String, damage: Int) {
-//        println("$name использует заклинание '$spellName' против ${enemy.name}!")
-//        if (element == enemy.element) {
-//            println("Стихии совпадают! Урон снижен.")
-//            val reducedDamage = damage / 2
-//            enemy.takeDamage(amount = reducedDamage)
-//        } else {
-//            enemy.takeDamage(amount = damage)
-//        }
-//    }
+    fun castSpellOn(enemy: characters.Enemy, spellName: String, damage: Int) {
+        println("$name использует заклинание '$spellName' против ${enemy.name}!")
+        if (element == enemy.element) {
+            println("Стихии совпадают! Урон снижен.")
+            val reducedDamage = damage / 2
+            enemy.takeDamage(amount = reducedDamage)
+        } else {
+            enemy.takeDamage(amount = damage)
+        }
+    }
     fun duel(oppenent: Hero){
         println("Дуэль между $name и ${oppenent.name} начинается!")
         println("$name атакует первым!")
@@ -74,27 +76,27 @@ class Hero{
     fun isAlive(): Boolean {
         return hp > 0
     }
-//    fun canAcceptQuest(quest: world.Quest): Boolean{
-//        val canAccept = when (quest.difficulty.lowercase()){
-//            "лёгкий" -> level >= 1
-//            "средний" -> level >= 3
-//            "сложный" -> level >= 5
-//            else -> false
-//        }
-//        if (canAccept){
-//            println("$name может принять квест <${quest.title}>!")
-//        } else {
-//            println("$name не может принять квест <${quest.title}>." +
-//                    "Требуется более высокий уровень.")
-//        }
-//        return canAccept
-//    }
+    fun canAcceptQuest(quest: world.Quest): Boolean{
+        val canAccept = when (quest.difficulty.lowercase()){
+            "лёгкий" -> level >= 1
+            "средний" -> level >= 3
+            "сложный" -> level >= 5
+            else -> false
+        }
+        if (canAccept){
+            println("$name может принять квест <${quest.title}>!")
+        } else {
+            println("$name не может принять квест <${quest.title}>." +
+                    "Требуется более высокий уровень.")
+        }
+        return canAccept
+    }
 
     /*
     ZAD3 LAB6
      */
-//    fun canCast(spell: Spell): Boolean{
-//        return spell.name.length <= level * 2 && spell.width <= 5 && spell.height <= 5
-//}
+    fun canCast(spell: Spell): Boolean{
+        return spell.name.length <= level * 2 && spell.width <= 5 && spell.height <= 5
+    }
 
 }

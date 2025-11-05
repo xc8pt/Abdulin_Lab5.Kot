@@ -47,4 +47,48 @@ fun main(){
 //    }
 //    val quest = world.Quest("Побег из замка", 5, 700, "Сложный")
 //    println("Квест сложный? ${quest.isHard()}")
+
+//    val quest = Quest("Поиск артефактов",
+//        3,
+//        800,
+//        "Средний")
+//    val contract = Contract("Защита каравана",
+//        "Гильдия купцов",
+//        "Охрана груза",
+//        1200)
+//    val specialOp = SpecialOperation("Операция 'Тень'",
+//        2500,
+//        2,
+//        true)
+//    println("Информация о квесте: ")
+//    println("Название: ${quest.title}, Награда: ${quest.reward}")
+//
+//    println("\nИнформация о контракте: ")
+//    println("Название: ${contract.title}, Заказчик: ${contract.clientName}")
+//
+//    println("\nИнформация о спецуперации: ")
+//    println("Название: ${specialOp.title}")
+//    specialOp.showReward()
+
+    val missions = listOf<Mission>(
+        Quest("Охота на монстров",
+            3,
+            600,
+            "Средний"),
+        SpecialOperation("Ночной рейд",
+            1500,
+            requiredClearance = 2,
+            isConvert = true),
+        Contract("Сопровождение каравана",
+            "Гильдия Торговец",
+            "Доставить груз через лес",
+            800,
+            isUrgent = true)
+
+    )
+    for (mission in missions){
+        mission.describe()
+        println("Высокая награда? ${if (mission.isHighReward()) "Да" else "Нет"}")
+        println()
+    }
 }

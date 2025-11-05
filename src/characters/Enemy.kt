@@ -1,9 +1,13 @@
 package characters
 
-class Enemy(string: String, i: Int) {
-    var name: String = "Враг"
-    var hp: Int = 50
-    var element: String = "Огонь"
+open class Enemy(
+    name: String,
+    hp: Int = 0,
+    element: String = "Неизвестный",
+) : GameCharacter(name, hp, element) {
+//    var name: String = "Враг"
+//    var hp: Int = 50
+//    var element: String = "Огонь"
     var aggressionLevel: Int = 2
 
 
@@ -24,7 +28,7 @@ class Enemy(string: String, i: Int) {
     /*
     ZAD4 LAB6
      */
-    fun calculatePower(): Int {
-        return hp * aggressionLevel
-    }
+//    fun calculatePower(): Int {
+//        return hp * aggressionLevel
+//    }
 }
