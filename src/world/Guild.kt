@@ -70,25 +70,34 @@ fun main(){
 //    println("Название: ${specialOp.title}")
 //    specialOp.showReward()
 
-    val missions = listOf<Mission>(
-        Quest("Охота на монстров",
-            3,
-            600,
-            "Средний"),
-        SpecialOperation("Ночной рейд",
-            1500,
-            requiredClearance = 2,
-            isConvert = true),
-        Contract("Сопровождение каравана",
-            "Гильдия Торговец",
-            "Доставить груз через лес",
-            800,
-            isUrgent = true)
+//    val missions = listOf<Mission>(
+//        Quest("Охота на монстров",
+//            3,
+//            600,
+//            "Средний"),
+//        SpecialOperation("Ночной рейд",
+//            1500,
+//            requiredClearance = 2,
+//            isConvert = true),
+//        Contract("Сопровождение каравана",
+//            "Гильдия Торговец",
+//            "Доставить груз через лес",
+//            800,
+//            isUrgent = true)
+//
+//    )
+//    for (mission in missions){
+//        mission.describe()
+//        println("Высокая награда? ${if (mission.isHighReward()) "Да" else "Нет"}")
+//        println()
+//    }
 
+    val escortQuest = Quest(
+        title = "Сопроводи торговца до деревни",
+        duration = 4,
+        reward = 120,
+        difficulty = "Средний",
+        questType = QuestType.ESCORT
     )
-    for (mission in missions){
-        mission.describe()
-        println("Высокая награда? ${if (mission.isHighReward()) "Да" else "Нет"}")
-        println()
-    }
+    escortQuest.printInfo()
 }

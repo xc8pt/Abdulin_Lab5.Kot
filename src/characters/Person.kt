@@ -1,5 +1,9 @@
 package characters
 
+import world.Quest
+import world.QuestType
+import world.Trader
+
 fun main() {
 // val naruto: characters.Hero = characters.Hero()
 // naruto.name = "Наруто Узумаки"
@@ -86,12 +90,30 @@ fun main() {
 //    dragon.startPhase(2)
 //    println(dragon.dropLoot())
 //    dragon.takeDamage(150)
-    val enemy: GameCharacter = Enemy("Джин")
-    val hero: GameCharacter = Hero("Наруто")
-    val npc: GameCharacter = NPC("Торговец")
+//    val enemy: GameCharacter = Enemy("Джин")
+//    val hero: GameCharacter = Hero("Наруто")
+//    val npc: GameCharacter = NPC("Торговец")
+//
+//    println(enemy.name)
+//    (enemy as Enemy).takeDamage(20)
+//    enemy.takeDamage(20)
+//    println(enemy.name)
 
-    println(enemy.name)
-    (enemy as Enemy).takeDamage(20)
-    enemy.takeDamage(20)
-    println(enemy.name)
+//    val trader = Trader("Rinat")
+//
+//    trader.addQuest(Quest("Собрать травы",
+//        2,
+//        50,
+//        "Лёгкий",
+//        QuestType.DELIVERY))
+//    trader.addQuest(Quest("Убить волков",
+//        3,
+//        100,
+//        "Средний",
+//        QuestType.ELIMINATION))
+//
+//    trader.showAvailableQuests()
+//
+//     val selectedQuest = trader.giveQuest(1)
+//    selectedQuest.describe()
 }
